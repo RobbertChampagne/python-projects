@@ -1,4 +1,4 @@
-# python async/threadsCpuBoundTasks.py
+# python concurrency_and_parallelism/sequential_vs_threads_vs_multiprocessing/threadsCpuBoundTasks.py
 
 # To illustrate the impact of the GIL on CPU-bound tasks, this simple example performs a CPU-intensive computation using multiple threads.
 # This example will show that even though we create multiple threads, the GIL ensures that only one thread executes Python bytecode at a time, leading to no significant performance improvement.
@@ -23,6 +23,9 @@ def worker(n):
 # Number of iterations for the CPU-bound task
 n = 10**7
 
+# Record the start time for the whole script
+script_start_time = time.time()
+
 # Create and start threads
 threads = []
 for i in range(4):
@@ -33,5 +36,10 @@ for i in range(4):
 # Wait for all threads to complete
 for thread in threads:
     thread.join()
+    
+# Record the end time for the whole script
+script_end_time = time.time()
 
-print("All CPU-bound tasks completed.")
+# Calculate and print the total time taken for the whole script
+total_time = script_end_time - script_start_time
+print(f"All CPU-bound tasks completed. Total time taken: {total_time} seconds.")

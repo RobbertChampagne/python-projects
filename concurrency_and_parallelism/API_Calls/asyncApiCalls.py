@@ -1,10 +1,11 @@
-# python async/asyncApiCalls.py
+# python concurrency_and_parallelism/API_Calls/asyncApiCalls.py
 
 # The use of asyncio allows for efficient non-blocking I/O operations,
 # making the code more performant compared to using threads for I/O-bound tasks.
 
 import asyncio
 import httpx
+import time
 
 # Asynchronous function to make an API call
 async def fetch_data(client, url):
@@ -34,8 +35,16 @@ async def main():
         # '*' means that the list tasks is being unpacked so that each element of the list is passed as a separate argument to the function.
         await asyncio.gather(*tasks) # To run the tasks concurrently and wait for all of them to complete.
 
+# Record the start time for the whole script
+script_start_time = time.time()
+
 # Run the main function
 if __name__ == "__main__":
-    asyncio.run(main())
+    asyncio.run(main()) 
 
-print("All API calls completed.")
+# Record the end time for the whole script
+script_end_time = time.time()
+
+# Calculate and print the total time taken for the whole script
+total_time = script_end_time - script_start_time
+print(f"All API calls completed. Total time taken: {total_time} seconds.")
