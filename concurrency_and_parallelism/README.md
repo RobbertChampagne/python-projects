@@ -137,3 +137,9 @@ The choice between using threads and asyncio depends on your specific use case a
 - For **CPU-bound tasks** (e.g., heavy computations), neither threads nor asyncio will provide significant benefits due to the GIL. In such cases, consider using the multiprocessing module to achieve true parallelism.
 
 In summary, for making concurrent **API calls, asyncio is typically more efficient** and should be preferred over threads, especially when dealing with a large number of I/O-bound operations.
+
+# Final conclusion:
+- **I/O-bound tasks** and non-blocking operations: `asyncio` => **`CONCURRENCY`**
+- **CPU-bound Tasks**: `Multiprocessing` => **`PARALLISM`**
+
+Integration: You can offload CPU-bound tasks to a process pool using concurrent futures and integrate them into an asyncio event loop.
