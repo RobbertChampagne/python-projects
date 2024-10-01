@@ -33,6 +33,9 @@ def main():
     # Create and start processes
     processes = []
     for i in range(4):
+        # A tuple containing the arguments to be passed to the worker function. 
+        # In this case, it contains a single argument n
+        # Can also contain multiple: args=(task_id, duration)
         process = multiprocessing.Process(target=worker, args=(n,))
         processes.append(process)
         process.start()
@@ -49,5 +52,4 @@ def main():
     print(f"All CPU-bound tasks completed. Total time taken: {total_time} seconds.")
 
 if __name__ == '__main__':
-    
     main()
