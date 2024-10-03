@@ -7,3 +7,15 @@ CRITICAL - This is a critical message
 2024-10-02 15:41:46 WARNING This is a warning message
 2024-10-02 15:41:46 ERROR This is an error message
 2024-10-02 15:41:46 CRITICAL This is a critical message
+2024-10-03 07:33:45 - root - WARNING - This is a warning message
+2024-10-03 07:33:45 - root - ERROR - This is an error message
+2024-10-03 07:33:45 - root - CRITICAL - This is a critical message
+2024-10-03 07:55:41 - root - WARNING - This is a warning message
+2024-10-03 07:55:41 - root - ERROR - This is an error message
+2024-10-03 07:55:41 - root - CRITICAL - This is a critical message
+2024-10-03 07:55:49 - root - WARNING - This is a warning message
+2024-10-03 07:55:49 - root - ERROR - This is an error message
+2024-10-03 07:55:49 - root - CRITICAL - This is a critical message
+2024-10-03 07:56:09 - root - WARNING - This is a warning message
+2024-10-03 07:56:09 - root - ERROR - This is an error message
+2024-10-03 07:56:09 - root - CRITICAL - This is a critical message
