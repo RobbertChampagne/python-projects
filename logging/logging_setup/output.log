@@ -1,0 +1,4 @@
+2024-10-04 07:08:42 - INFO - HTTP Request: GET https://reqres.in/api/users/8 "HTTP/1.1 200 OK"
+2024-10-04 07:08:42 - INFO - Logging example.
+2024-10-04 07:23:25 - INFO - HTTP Request: GET https://reqres.in/api/users/8 "HTTP/1.1 200 OK"
+2024-10-04 07:23:25 - INFO - Logging example.
